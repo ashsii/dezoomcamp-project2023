@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "crypto-groove-382408",
+  "private_key_id": "135f575f3723cbc649292307f71156c2f08e9211",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1gs6KMtoCxO0/\nMgu2YOST3E2/yg2i0r+zbqzl3J6XvDPRJRPLTHyyGMuR2HmeX4CKJAJLYNKCKuR8\nwWMBtUvEWsxqLelmpfuffUcGsavipmLuBIyXV4T6ryEB9ld0TBiV0M28++HpfPSV\nhY32UsVtd3qQxpNO5M3C//o8xMfvfCGMH8CmKwTVrg50f7Q2DNhYGwR4IbWHeKuR\nFLrNJbFOyDWpi1VagRQbGM2i8+bL8Jsk74UvZF/c3A70B3nflKZV5OzgoGfVr6Sv\n145KvKTxFxUmBJMlxEOlYTSQjxDj6IkjjqgqKVu7sEicW1I6RjVW5+fPCEanTpqz\njqoZDAfFAgMBAAECggEAIZz6M7SME/Q0/T1+1sTlv44OJeS8lrkRgCCQSzcKdY4I\nSIRlwIHHG9IkrLsadp439x0JAb2J7koUKxhDBfd1cwTfkxAyh2xYhyYTh6VSb/Qh\nIPPdt08hVK0m3y6n7mUDLodO+l7o7KzTvHbRndqhLg7wtyvW7sbHZgOyaxuD7RDP\nY3iJbEodCAx5cNTV3M15n19zVSMY7fQQQdu32fhF/S3qtpG7CUBg91ivT2n85fNm\nNW/GAJb1ifBPvP7duofP462LaaJ+5fba/Y7VfpwNWYdZi27b9uAQRtWED8KpGLIc\nMiWvrYp87KpRom+hqXulqcPqMFVBDsekh9E+/AA5IQKBgQDeL4E/RkKc6+vucjQO\nO8HO17o2+kULsdXcD1ZMsMCpzy/hm5kuqKnhJFWsGehPHPsXsGich2EoWmlBmYwk\nEvGu+5OLM9pkeG2tO1hj1IWGXyJxV6krd6D9+WhENVSsep/IUv/HSNYkzP7tbtjg\n12IaMc+i6QpY/qF4ImNEQHm9tQKBgQDRIpfB+hFyZ1Z0OnuEBmTDGE1BXcp6wMOj\nVA5b71uMdi3G/iCF04dQVOuC0OTGKf2UDyRXNa03Ypm/VJV/LR3ujpwdEJmURtnk\ni/Ic+/pkc2sxmbhzPAWclCbchdJPVNnTRsoBxUG9S0mk54QbcwrEY72UPGmqSS6p\nvAEezFfr0QKBgEA6WVFyPRVhub0fNF8c9SSXBhSYelcsHFdV86uNuNQduYitUzXC\nugEEYOO0RYyBIzCw5TzCgdqJcD3vZiyTcVwVC4zE+4/ppELckeuh5st2Ot2q6pNP\nLLHeZD67b/PAKupc2+W+73CJ9fOrBHTSrmBGH/DHDx+00/aHckyrmsW1AoGBAKhy\n1497T2A5ke4uSNyPlct6oIdc90EmUK4WfzZXtgKOEdMtT57bQStYKxYEEbD3k3MV\nOy0vY+Sve60bgQqdmXVT0rSqcTl4U/r9Kbdk0krkmFusOGBA4Tg8MI0BEOOrMYQ2\niXEhpBDHOnsjq0m8wNhsif+DJYzuQzKd5r0a1FpxAoGBAI4M9IIPPu+HK3uxT3No\n93KqozOwzBGBvwK9GRkAC8OUBCvMoafXqSwdRIEJubww4AgJ98nt9F2TbKtnzf8n\nV6+959gXX09qLaEXWs6WHuN+DZmZdQucQRK6aZgXo5KJZO+bzA5udKSNnX3PN3T9\nwvJduj30BPCoYwUexUd2jATo\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account@crypto-groove-382408.iam.gserviceaccount.com",
+  "client_id": "106011865264881168512",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account%40crypto-groove-382408.iam.gserviceaccount.com"
+}

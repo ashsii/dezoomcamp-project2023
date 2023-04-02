@@ -1,0 +1,25 @@
+1. create dezoomcamp-project2023
+    - set custom project id (crypto-groove-382408)
+2. setup service account de-user
+3. give user permissions
+4. download sdk for local setup
+5. set keys
+6. enable apis
+
+just main.tf and variables.tf needed
+export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"; 
+ 
+terraform init
+terraform plan -var="project="
+terraform apply -var="project="
+
+pip install -r requirements.txt
+prefect orion start
+prefect block register -m prefect_gcp
+Create a GCP Credentials block in the UI.
+
+zoom-gcp-creds : credentials
+zoom-gcs : bucket
+
+
+python code.py to run prefect flow
