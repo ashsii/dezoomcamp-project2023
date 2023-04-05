@@ -1,49 +1,86 @@
-# dezoomcamp-project2023
+# Data Engineer Zoomcamp Capstone Project
 
-1. create dezoomcamp-project2023
-    - set custom project id (crypto-groove-382408)
-2. setup service account de-user
-3. give user permissions
-4. download sdk for local setup
-5. set keys
-6. enable apis
+Data based on https://www.kaggle.com/datasets/samlearner/letterboxd-movie-ratings-data
 
-just main.tf and variables.tf needed
-export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"; 
- 
-terraform init
-terraform plan -var="project="
-terraform apply -var="project="
+Download the data and place in /data/ in the same directory.
 
-pip install -r requirements.txt
-prefect orion start
-prefect block register -m prefect_gcp
+## Has the ratings of movies over time gotten worse or better?
+
+### Requirements:
+- Google Cloud Platform Account
+- Local System with:
+    - GCP SDK
+    - Python
+    - Terraform
+    - Prefect (installed by requirements.txt)
+    
+
+### Instructions 
+#### Setup GCP Project
+1. Create project dezoomcamp-project2023 on Google Cloud Platform
+    - Set a custom project id
+2. Setup Service Account 'de-user' via the IAM-Admin Service Accounts page
+3. Give Service Account Permissions
+5. Enable apis
+6. Set keys locally
+    - export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"; 
+
+#### Use terraform to create buckets/big query dataset
+Run within 1_terraform directory:
+
+`terraform init`
+
+`terraform plan -var="project=project id here"`
+
+`terraform apply -var="project=project id here"`
+
+
+#### Install Prefect
+
+`pip install -r requirements.txt`
+
+`prefect orion start`
+
+#### Setup GCP Blocks
+
+`prefect block register -m prefect_gcp`
+
 Create a GCP Credentials block in the UI.
+    - credentials block: named 'zoom-gcp-creds'
+    - bucket block: named tzoom-gcs
 
-zoom-gcp-creds : credentials
-zoom-gcs : bucket
+#### Run flows
 
+`python 1_etl_web_to_gcs.py`
 
-python code.py to run prefect flow
+`python 2_etl_gcs_to_bq.py {project id here}`
 
 or
 
-build deployments
+Build deployments
 
-$ prefect deployment build ./2_etl_gcs_to_bq.py:etl_parent_flow -n "Parameterized ETL"
-
-$ prefect deployment apply etl_parent_flow-deployment.yaml
-
-start agent 
-prefect agent start -q 'default'
-
-use custom run and enter custom parameters
+`prefect deployment build ./2_flows/2_etl_gcs_to_bq.py:etl_parent_flow -n "Parameterized ETL"`
 
 requires parameters {"project_id":"project_id", "dataset_name":"letterboxd_data"}
 
+`prefect deployment apply etl_parent_flow-deployment.yaml`
+
+Start agent 
+
+`prefect agent start -q 'default'`
+
+use custom run and enter custom parameters
+
+#### Data Studio
+Log into data studio and create dashboard:
 
 https://lookerstudio.google.com/s/h9nNKkspcgk
 
-add column year
-YEAR(release_date)
-average_rating>8
+Custom fields based on:
+
+`YEAR(release_date)`
+
+`average_rating>8`
+
+![image](https://user-images.githubusercontent.com/19361148/230004974-e530e131-478f-445e-b907-9829bbf11423.png)
+
