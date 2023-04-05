@@ -1,5 +1,7 @@
 # Data Engineer Zoomcamp Capstone Project
 
+Completed by T*** T*** with email t.t****@b****.com
+
 Data based on https://www.kaggle.com/datasets/samlearner/letterboxd-movie-ratings-data
 
 Download the data and place in /data/ in the same directory.
