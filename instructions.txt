@@ -23,3 +23,25 @@ zoom-gcs : bucket
 
 
 python code.py to run prefect flow
+
+or
+
+build deployments
+
+$ prefect deployment build ./2_etl_gcs_to_bq.py:etl_parent_flow -n "Parameterized ETL"
+
+$ prefect deployment apply etl_parent_flow-deployment.yaml
+
+start agent 
+prefect agent start -q 'default'
+
+use custom run and enter custom parameters
+
+requires parameters {"project_id":"project_id", "dataset_name":"letterboxd_data"}
+
+
+https://lookerstudio.google.com/s/h9nNKkspcgk
+
+add column year
+YEAR(release_date)
+average_rating>8

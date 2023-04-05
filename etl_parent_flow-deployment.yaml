@@ -1,0 +1,52 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow'
+###
+name: Parameterized ETL
+description: null
+version: 9ba28a4eca491c7ac70fb3640298663c
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters:
+  project_id: project_id
+  dataset_name: letterboxd_data
+schedule: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 28d74ad6-b48a-4542-a039-f159a66f615e
+  _block_document_name: anonymous-ef955d08-e920-4144-a138-7af72e537b04
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: C:\Users\TimmyTruong\OneDrive - IRPSX Pty Limited\Documents\DE_Zoomcamp\project\dezoomcamp-project2023
+entrypoint: 2_etl_gcs_to_bq.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    project_id:
+      title: project_id
+      default: project_id
+      position: 0
+      type: string
+    dataset_name:
+      title: dataset_name
+      default: letterboxd_data
+      position: 1
+      type: string
+  required: null
+  definitions: null
