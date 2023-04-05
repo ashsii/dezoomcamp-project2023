@@ -5,7 +5,7 @@ from google.oauth2 import service_account
 from prefect import flow, task
 from prefect_gcp.cloud_storage import GcsBucket
 from prefect_gcp import GcpCredentials
-
+import sys
 
 @task(retries=3)
 def extract_from_gcs(data: str) -> Path:
@@ -174,6 +174,10 @@ def etl_parent_flow(
     etl_gcs_to_bq(project_id, dataset_name)
 
 if __name__ == "__main__":
-    project_id = 'crypto-groove-382408'
     dataset_name = 'letterboxd_data'
+    try:
+        project_id = sys.argv[1]
+    except:
+        project_id = 'crypto-groove-382408'
+    print(f"Project ID is {project_id}")
     etl_gcs_to_bq(project_id,dataset_name)
