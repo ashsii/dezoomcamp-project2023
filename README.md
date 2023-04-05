@@ -1,5 +1,9 @@
 # Data Engineer Zoomcamp Capstone Project
 
+Data based on https://www.kaggle.com/datasets/samlearner/letterboxd-movie-ratings-data
+
+Download the data and place in /data/ in the same directory.
+
 ## Has the ratings of movies over time gotten worse or better?
 
 ### Requirements:
@@ -77,3 +81,6 @@ Custom fields based on:
 `YEAR(release_date)`
 
 `average_rating>8`
+
+![image](https://user-images.githubusercontent.com/19361148/230004974-e530e131-478f-445e-b907-9829bbf11423.png)
+
